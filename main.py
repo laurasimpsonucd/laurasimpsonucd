@@ -15,5 +15,6 @@ if __name__ == '__main__':
 
 # See PyCharm help at https://www.jetbrains.com/help/pyc
 import pandas
-data=pandas.read_csv("nyc-rolling-sales.csv")
+
+data = pandas.read_csv("nyc-rolling-sales.csv")
 print(data)
