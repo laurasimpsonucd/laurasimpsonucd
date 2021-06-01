@@ -64,8 +64,69 @@ df = pd.DataFrame(property, columns=['neighbourhood', 'sale Price', 'sale date']
 
 print(df)
 
+import pandas as pd
+
+property = {'neighbourhood': ['alphabet city','Chelsea','chinatown','civic center'],
+        'Price': [662500,3936272,8000000,11693337],
+        'sale date': [2016, 2017,2016,2017]}
+
+df = pd.DataFrame(property, columns=['neighbourhood', 'sale Price', 'sale date'])
+
+# sort property by - ascending order
+df.sort_values(by=['neighbourhood'], inplace=True)
+
+print(df)
+
+import pandas as pd
+
+property = {'neighbourhood': ['alphabet city','Chelsea','chinatown','civic center'],
+        'Price': [662500,3936272,8000000,11693337],
+        'sale date': [2016, 2017,2016,2017]}
+
+df = pd.DataFrame(property, columns=['neighbourhood', 'sale Price', 'sale date'])
+
+# sort property by - descending order
+
+df.sort_values(by=['neighbourhood'], inplace=True, ascending=False)
+
+print (df)
 
 
+
+import pandas as pd
+
+property = {'neighbourhood': ['alphabet city','Chelsea','chinatown','civic center'],
+        'Price': [662500,3936272,8000000,11693337],
+        'sale date': [2016, 2017,2016,2017]}
+
+df = pd.DataFrame(property, columns=['neighbourhood', 'sale Price', 'sale date'])
+
+# sort property by - descending order
+
+df.sort_values(by=['sale date'], inplace=True, ascending=False)
+
+print (df)
+
+import pandas as pd
+
+property = {'neighbourhood': ['alphabet city','Chelsea','chinatown','civic center'],
+        'sale Price': [662500,3936272,8000000,11693337]}
+
+df = pd.DataFrame(property, columns= ['neighbourhood', 'sale Price'])
+
+print(df)
+
+
+import pandas as pd
+
+property = {'neighbourhood': ['alphabet city','Chelsea','chinatown','civic center'],
+        'sale Price': [662500,3936272,8000000,11693337]}
+
+df = pd.DataFrame(property, columns= ['neighbourhood', 'sale Price'])
+df = df.drop([0, 2])
+df = df.reset_index(drop=True)
+
+print(df)
 
 
 
