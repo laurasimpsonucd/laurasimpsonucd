@@ -118,7 +118,7 @@ print(df)
 
 
 import pandas as pd
-
+#indexing
 property = {'neighbourhood': ['alphabet city','Chelsea','chinatown','civic center'],
         'sale Price': [662500,3936272,8000000,11693337]}
 
@@ -127,6 +127,28 @@ df = df.drop([0, 2])
 df = df.reset_index(drop=True)
 
 print(df)
+
+import pandas as pd
+#grouping commission by estate agent
+data = {'Month': ['Jan ','Feb ','Mar ','Apr ','May ','Jun '],
+        'Estate agent 1 Commission': [1500,2200,3500,1800,3000,2800],
+        'Estate agent 2 Commission': [3200,4100,2500,3000,4700,3400],
+        'Estate agent 3 Commission': [1700,3100,3300,2700,2400,3100]
+        }
+
+df = pd.DataFrame(data,columns=['Month','Estate agent 1 Commission','Estate agent 2 Commission','Estate agent 3 Commission'])
+print (df)
+
+import pandas as pd
+#remove duplicates
+property = {'type': ['2 bed','3 bed','4 bed','4 bed','2 bed','1 bed','2 bed','4 bed'],
+         'neighbourhood': ['Chelsea','Chinatown','Chinatown','Chelsea','Alphabet city','civic center','Chinatown','Chelsea']
+        }
+df = pd.DataFrame(property, columns = ['type', 'neighbourhood'])
+
+df_duplicates_removed = df.drop_duplicates()
+print(df_duplicates_removed)
+
 
 
 
